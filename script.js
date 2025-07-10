@@ -12,14 +12,15 @@
             });
         });
 
-        // Mobile menu toggle
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
+        document.addEventListener('DOMContentLoaded', () => {
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
 
-        mobileMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        });
+  mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    mobileMenu.classList.toggle('open'); // Optional: for animating the hamburger icon
+  });
+});
 
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
